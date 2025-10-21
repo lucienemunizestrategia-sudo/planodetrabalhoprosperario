@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prospera Rio - Relatório de Impacto Social</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #EFF1F3;
+            color: #021738;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #092040 0%, #021738 100%);
+            color: #FFFFFF;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo {
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        
+        .location-text {
+            color: #ECC203;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+        
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 32px;
+            margin-top: 20px;
+        }
+        
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+        
+        .intro {
+            background: #FFFFFF;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border-left: 5px solid #00B7D7;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .intro h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #092040;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .intro p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .stage {
+            background: #FFFFFF;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        
+        .stage-header {
+            background: #092040;
+            color: #FFFFFF;
+            padding: 25px 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .stage-number {
+            background: #00B7D7;
+            color: #FFFFFF;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .stage-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+        }
+        
+        .stage-content {
+            padding: 30px;
+        }
+        
+        .objective {
+            background: linear-gradient(to right, #EFF1F3, #FFFFFF);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border-left: 4px solid #ECC203;
+        }
+        
+        .objective h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: #092040;
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .objective p {
+            font-size: 15px;
+            color: #021738;
+        }
+        
+        .territory-section {
+            margin: 25px 0;
+        }
+        
+        .territory-header {
+            background: #00B7D7;
+            color: #FFFFFF;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .meta-card {
+            background: #FFFFFF;
+            border: 2px solid #EFF1F3;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .meta-card:hover {
+            border-color: #00B7D7;
+            box-shadow: 0 4px 12px rgba(0, 183, 215, 0.1);
+        }
+        
+        .meta-title {
+            font-family: 'Montserrat', sans-serif;
+            color: #021738;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .meta-icon {
+            color: #ECC203;
+            font-weight: 700;
+        }
+        
+        .meta-description {
+            font-size: 15px;
+            color: #021738;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        
+        .meta-evidence {
+            background: #EFF1F3;
+            padding: 12px 15px;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #092040;
+            margin-top: 10px;
+        }
+        
+        .meta-evidence strong {
+            color: #00B7D7;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .stats-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .stat-item {
+            background: linear-gradient(135deg, #00B7D7, #092040);
+            color: #FFFFFF;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #ECC203;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            margin-top: 8px;
+            opacity: 0.9;
+        }
+        
+        .duration {
+            background: #ECC203;
+            color: #021738;
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            margin: 15px 0;
+        }
+        
+        .impact-summary {
+            background: linear-gradient(135deg, #092040, #00B7D7);
+            color: #FFFFFF;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+        
+        .impact-summary h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #ECC203;
+        }
+        
+        .impact-item {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .impact-item:last-child {
+            border-bottom: none;
+        }
+        
+        .impact-item strong {
+            color: #ECC203;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <img src="https://lh3.googleusercontent.com/d/1x5sNkC9vd7CI78y0xdkWvgoadxPEMcIf=w800" alt="Prospera Rio" class="logo">
+                <div class="location-text">MARÉ · JACAREZINHO</div>
+            </div>
+            <h1>RESULTADOS ESPERADOS DE IMPACTO SOCIAL</h1>
+            <p class="subtitle">Sistema de Metas e Evidências por Etapa e Território</p>
+        </div>
+
+        <div class="intro">
+            <h2> Objetivo do Projeto</h2>
+            <p><strong>Inclusão produtiva e geração de renda</strong> para pessoas negras, mulheres e famílias de pessoas com deficiência nos territórios da Maré e Jacarezinho, por meio de identificação, formação, capacitação técnica e fomento ao empreendedorismo local.</p>
+            <p style="margin-top: 15px;"><strong>Prazo de Vigência:</strong> 18 meses a contar da assinatura</p>
+        </div>
+
+        <!-- ETAPA 1 -->
+        <div class="stage">
+            <div class="stage-header">
+                <div class="stage-number">1</div>
+                <div class="stage-title">IDENTIFICAÇÃO E MAPEAMENTO DE EMPREENDIMENTOS NAS FAVELAS</div>
+            </div>
+            <div class="stage-content">
+                <span class="duration">⏱ Duração: 2 meses</span>
+                
+                <div class="objective">
+                    <h4> Objetivo Geral</h4>
+                    <p>Identificar e mapear pelo menos 1.000 empreendimentos na Favela da Maré e no Jacarezinho, criando um diagnóstico territorial que permita selecionar o público-alvo e estabelecer um canal de diálogo para divulgação das ações.</p>
+                </div>
+
+                <div class="stats-box">
+                    <div class="stat-item">
+                        <div class="stat-number">1.000</div>
+                        <div class="stat-label">Questionários Aplicados</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500</div>
+                        <div class="stat-label">Por Território</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Territórios Atendidos</div>
+                    </div>
+                </div>
+
+                <h3 style="font-family: 'Montserrat', sans-serif; color: #092040; margin: 25px 0 15px 0; font-size: 20px;"> Ações e Metas Detalhadas</h3>
+
+                <div class="meta-card">
+                    <div class="meta-title">
+                      <span class="meta-icon">●</span>
+                        Ação 1.1 - Identificação de Empreendimentos e Empreendedores em Comunidades Vulneráveis
+                    </div>
+                    <div class="meta-description">
+                        Contratação de empresa especializada para aplicação de 500 questionários em iniciativas empreendedoras das comunidades da Maré e do Jacarezinho. O mapeamento será necessário para alcançar o público-alvo do projeto, sendo possível, a partir dele, selecionar os negócios que farão parte do núcleo duro e estabelecer um canal de diálogo para divulgação das ações posteriores.
+                    </div>
+                    <div class="meta-evidence">
+   <strong><span class="meta-icon">●</span> Evidências de Execução:</strong><br>
+   • Lista de 1.000 empreendimentos identificados<br>
+   • Questionários aplicados (mínimo 500 por território)<br>
+   • Banco de dados estruturado com perfil dos empreendedores<br>
+   • Registro fotográfico das visitas de campo
+</div>
+
+                </div>
+
+                <div class="territory-section">
+                    <div class="territory-header"> TERRITÓRIO: MARÉ</div>
+                    <div class="meta-card">
+                        <div class="meta-title">
+                            <span class="meta-icon">●</span>
+                            Meta Quantitativa
+                        </div>
+                        <div class="meta-description">
+                            <strong>500 questionários</strong> aplicados identificando:
+                            <ul style="margin-top: 10px; margin-left: 20px;">
+                                <li>Perfil do empreendedor (gênero, raça, vínculo com PcD)</li>
+                                <li>Tipo de negócio e setor de atuação</li>
+                                <li>Estágio de maturidade do empreendimento</li>
+                                <li>Principais necessidades e desafios</li>
+                                <li>Disponibilidade para participação no projeto</li>
+                            </ul>
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Indicadores de Impacto Social:</strong>
+                            • % de empreendedoras mulheres identificadas<br>
+                            • % de empreendedores negros identificados<br>
+                            • % de famílias de PcD alcançadas<br>
+                            • Distribuição geográfica dos empreendimentos na Maré
+                        </div>
+                    </div>
+                </div>
+
+                <div class="territory-section">
+                    <div class="territory-header"> TERRITÓRIO: JACAREZINHO</div>
+                    <div class="meta-card">
+                        <div class="meta-title">
+                            <span class="meta-icon">●</span>
+                            Meta Quantitativa
+                        </div>
+                        <div class="meta-description">
+                            <strong>500 questionários</strong> aplicados identificando:
+                            <ul style="margin-top: 10px; margin-left: 20px;">
+                                <li>Perfil do empreendedor (gênero, raça, vínculo com PcD)</li>
+                                <li>Tipo de negócio e setor de atuação</li>
+                                <li>Estágio de maturidade do empreendimento</li>
+                                <li>Principais necessidades e desafios</li>
+                                <li>Disponibilidade para participação no projeto</li>
+                            </ul>
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Indicadores de Impacto Social:</strong>
+                            • % de empreendedoras mulheres identificadas<br>
+                            • % de empreendedores negros identificados<br>
+                            • % de famílias de PcD alcançadas<br>
+                            • Distribuição geográfica dos empreendimentos no Jacarezinho
+                        </div>
+                    </div>
+                </div>
+
+                <div class="meta-card">
+                    <div class="meta-title">
+                        <span class="meta-icon">▶</span>
+                        Ação 1.2 - Sistematização de Dados em Comunidades Vulneráveis
+                    </div>
+                    <div class="meta-description">
+                        Produção de relatório sistematizado sobre as iniciativas empreendedoras mapeadas, contendo dados sobre o perfil dos negócios, distribuição geográfica, características e principais desafios. Contratação de empresa especializada para organizar e analisar os dados coletados na Ação 1, com foco em avaliar as necessidades práticas atuais dos empreendedores.
+                    </div>
+                    <div class="meta-evidence">
+                        <strong> Evidências de Execução:</strong>
+                        • Relatório analítico completo (arquivo digital)<br>
+                        • Gráficos e visualizações de dados<br>
+                        • Identificação de oportunidades de integração ao mercado formal<br>
+                        • Análise de dados com recorte de gênero, raça e deficiência<br>
+                        • Mapa territorial dos empreendimentos
+                    </div>
+                </div>
+
+                <div class="territory-section">
+                    <div class="territory-header"> RESULTADO ESPERADO DA ETAPA 1</div>
+                    <div class="meta-card" style="border-color: #ECC203;">
+                        <div class="meta-description">
+                            <strong style="color: #092040;">Impacto Social Esperado:</strong><br><br>
+                            ✓ <strong>1.000 empreendimentos</strong> visibilizados e incluídos em banco de dados territorial<br>
+                            ✓ Diagnóstico completo das <strong>potencialidades e desafios</strong> dos territórios<br>
+                            ✓ Criação de <strong>canal de comunicação</strong> direto com empreendedores locais<br>
+                            ✓ Base sólida para <strong>seleção do núcleo duro</strong> (100 empreendedores que receberão acompanhamento intensivo)<br>
+                            ✓ Reconhecimento e valorização da <strong>economia local periférica</strong><br>
+                            ✓ Dados estratégicos para <strong>formulação de políticas públicas</strong> de fomento ao empreendedorismo em favelas
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ETAPA 2 -->
+        <div class="stage">
+            <div class="stage-header">
+                <div class="stage-number">2</div>
+                <div class="stage-title">METODOLOGIA E PRODUÇÃO CUSTOMIZADA DE MATERIAIS PEDAGÓGICOS</div>
+            </div>
+            <div class="stage-content">
+                <span class="duration">⏱ Duração: Transversal ao projeto</span>
+                
+                <div class="objective">
+                    <h4> Objetivo Geral</h4>
+                    <p>Desenvolver metodologias inclusivas e materiais didáticos adaptados para pessoas negras, mulheres e pessoas com deficiência, garantindo acessibilidade plena e contextualização com as realidades dos territórios da Maré e Jacarezinho.</p>
+                </div>
+
+                <h3 style="font-family: 'Montserrat', sans-serif; color: #092040; margin: 25px 0 15px 0; font-size: 20px;"> Ações e Metas Detalhadas</h3>
+
+                <div class="meta-card">
+                    <div class="meta-title">
+                        <span class="meta-icon">▶</span>
+                        Ação 2.1 - Produção de Material Adaptado
+                    </div>
+                    <div class="meta-description">
+                        Contratação de empresa especializada em consultoria em metodologias inclusivas e assistivas para desenvolvimento e adaptação das metodologias de ensino que serão aplicadas ao longo do projeto. Produção do material de apoio pedagógico, de forma a garantir o alinhamento com os contextos e as realidades sociais do público-alvo.
+                        <br><br>
+                        <strong>Inclui:</strong> adaptação do material didático para atender a diferentes níveis de compreensão, utilização de exemplos práticos que refletem a vida cotidiana local e inclusão de tecnologias assistivas.
+                    </div>
+                    <div class="meta-evidence">
+                        <strong> Evidências de Execução:</strong>
+                        • Guia digital de recomendações de acessibilidade para espaços físicos de formação<br>
+                        • Material digital de apoio pedagógico adaptado<br>
+                        • 200 cópias físicas impressas do material pedagógico<br>
+                        • Registro de metodologias inclusivas desenvolvidas<br>
+                        • Avaliação de acessibilidade dos materiais
+                    </div>
+                </div>
+
+                <div class="meta-card">
+                    <div class="meta-title">
+                        <span class="meta-icon">●</span>
+                        Meta 2.1 - Guia Digital de Acessibilidade
+                    </div>
+                    <div class="meta-description">
+                        Produzir <strong>1 (um) guia digital</strong> de recomendações de acessibilidade para os espaços físicos dos locais de formação, fornecendo orientações e recomendações com todas as ações necessárias para garantir a plena participação das pessoas com deficiência.
+                    </div>
+                    <div class="meta-evidence">
+                        <strong> Indicadores de Impacto Social:</strong>
+                        • Guia publicado e distribuído aos locais de formação<br>
+                        • Nível de implementação das recomendações nos espaços<br>
+                        • Feedback dos participantes PcD sobre acessibilidade
+                    </div>
+                </div>
+
+                <div class="meta-card">
+                    <div class="meta-title">
+                        <span class="meta-icon">●</span>
+                        Meta 2.2 - Material Digital de Apoio Pedagógico
+                    </div>
+                    <div class="meta-description">
+                        Produzir <strong>1 (um) material digital</strong> de apoio pedagógico adaptado a pessoas negras, mulheres e pessoas com deficiência, contendo os conteúdos a serem abordados nas ações de formação previstas.
+                    </div>
+                    <div class="meta-evidence">
+                        <strong> Indicadores de Impacto Social:</strong>
+                        • Material digital acessível (formatos diversos)<br>
+                        • Linguagem inclusiva e contextualizada<br>
+                        • Exemplos práticos do cotidiano da Maré e Jacarezinho<br>
+                        • Compatibilidade com tecnologias assistivas
+                    </div>
+                </div>
+
+                <div class="meta-card">
+                    <div class="meta-title">
+                        <span class="meta-icon">●</span>
+                        Meta 2.3 - Impressão de Material Físico
+                    </div>
+                    <div class="meta-description">
+                        Imprimir <strong>200 (duzentas) cópias físicas</strong> do material digital de apoio pedagógico, a serem destinadas aos empreendedores do núcleo duro do projeto.
+                    </div>
+                    <div class="meta-evidence">
+                        <strong> Indicadores de Impacto Social:</strong>
+                        • 200 empreendedores com material físico em mãos<br>
+                        • Material como ferramenta de consulta permanente<br>
+                        • Distribuição documentada por território
+                    </div>
+                </div>
+
+                <div class="territory-section">
+                    <div class="territory-header"> RESULTADO ESPERADO DA ETAPA 2</div>
+                    <div class="meta-card" style="border-color: #ECC203;">
+                        <div class="meta-description">
+                            <strong style="color: #092040;">Impacto Social Esperado:</strong><br><br>
+                            ✓ <strong>Metodologia inclusiva</strong> que respeita e valoriza as diversidades<br>
+                            ✓ <strong>Materiais pedagógicos acessíveis</strong> para todos os públicos<br>
+                            ✓ <strong>Contextualização territorial</strong> dos conteúdos de formação<br>
+                            ✓ <strong>Espaços físicos adaptados</strong> para garantir participação plena de PcD<br>
+                            ✓ <strong>Exemplos práticos</strong> que dialogam com a realidade local<br>
+                            ✓ <strong>Tecnologias assistivas integradas</strong> ao processo de aprendizagem<br>
+                            ✓ Criação de <strong>referência metodológica</strong> replicável em outros territórios
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ETAPA 3 -->
+        <div class="stage">
+            <div class="stage-header">
+                <div class="stage-number">3</div>
+                <div class="stage-title">FORMAÇÃO DE LIDERANÇAS EMPREENDEDORAS</div>
+            </div>
+            <div class="stage-content">
+                <span class="duration">⏱ Duração: 1 mês</span>
+                
+                <div class="objective">
+                    <h4> Objetivo Geral</h4>
+                    <p>Realizar seminários de formação em empreendedorismo e liderança para pessoas em vulnerabilidade social dos territórios atendidos, identificando e formando lideranças empreendedoras com foco no desenvolvimento de habilidades práticas de gestão, estratégias de liderança e uso de tecnologias assistivas.</p>
+                </div>
+
+                <div class="stats-box">
+                    <div class="stat-item">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Seminários por Território</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500</div>
+                        <div class="stat-label">Participantes por Território</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1.000</div>
+                        <div class="stat-label">Total de Pessoas Atendidas</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">16h</div>
+                        <div class="stat-label">Carga Horária Oferecida</div>
+                    </div>
+                </div>
+
+                <h3 style="font-family: 'Montserrat', sans-serif; color: #092040; margin: 25px 0 15px 0; font-size: 20px;"> Ações e Metas Detalhadas</h3>
+
+                <div class="meta-card">
+                    <div class="meta-title">
+                        <span class="meta-icon">▶</span>
+                        Ação 3.1 - Seminários de Formação em Empreendedorismo e Liderança
+                    </div>
+                    <div class="meta-description">
+                        Os empreendedores mapeados nos territórios serão convidados para dois seminários de formação em empreendedorismo e liderança. Os encontros serão direcionados a até 500 empreendedores identificados em cada um dos territórios de atuação do projeto, com foco no desenvolvimento de habilidades práticas de gestão de negócios, estratégias de liderança e o uso de tecnologias assistivas, visando a autonomia e a autossustentabilidade desses empreendedores.
+                    </div>
+                </div>
+
+                <div class="territory-section">
+                    <div class="territory-header"> SEMINÁRIOS - MARÉ</div>
+                    
+                    <div class="meta-card">
+                        <div class="meta-title">
+                            <span class="meta-icon">●</span>
+                            Seminário 1: "O Papel das Lideranças no Desenvolvimento Territorial"
+                        </div>
+                        <div class="meta-description">
+                            <strong>Público:</strong> Até 500 empreendedores da Maré<br>
+                            <strong>Duração:</strong> 4h/aula (carga horária de 8h/aula no território)<br>
+                            <strong>Formato:</strong> Presencial
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Conteúdos Abordados:</strong>
+                            • Conceitos de liderança territorial<br>
+                            • Papel do empreendedor como agente de transformação social<br>
+                            • Liderança colaborativa e coletiva<br>
+                            • Articulação comunitária para desenvolvimento local<br>
+                            • Casos de sucesso de líderes empreendedores da Maré
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Evidências de Execução:</strong>
+                            • Lista de presença com 500 participantes<br>
+                            • Registro fotográfico e audiovisual<br>
+                            • Material didático distribuído<br>
+                            • Avaliação de satisfação dos participantes
+                        </div>
+                    </div>
+
+                    <div class="meta-card">
+                        <div class="meta-title">
+                            <span class="meta-icon">●</span>
+                            Seminário 2: "Criando um Ecossistema de Negócios em Áreas Populares"
+                        </div>
+                        <div class="meta-description">
+                            <strong>Público:</strong> Até 500 empreendedores da Maré<br>
+                            <strong>Duração:</strong> 4h/aula (carga horária de 8h/aula no território)<br>
+                            <strong>Formato:</strong> Presencial
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Conteúdos Abordados:</strong>
+                            • Conceito de ecossistema empreendedor<br>
+                            • Redes de colaboração entre negócios locais<br>
+                            • Fortalecimento da economia circular na favela<br>
+                            • Parcerias estratégicas e desenvolvimento conjunto<br>
+                            • Visão sistêmica do território como mercado
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Evidências de Execução:</strong>
+                            • Lista de presença com 500 participantes<br>
+                            • Registro fotográfico e audiovisual<br>
+                            • Material didático distribuído<br>
+                            • Avaliação de satisfação dos participantes
+                        </div>
+                    </div>
+                </div>
+
+                <div class="territory-section">
+                    <div class="territory-header"> SEMINÁRIOS - JACAREZINHO</div>
+                    
+                    <div class="meta-card">
+                        <div class="meta-title">
+                            <span class="meta-icon">●</span>
+                            Seminário 1: "O Papel das Lideranças no Desenvolvimento Territorial"
+                        </div>
+                        <div class="meta-description">
+                            <strong>Público:</strong> Até 500 empreendedores do Jacarezinho<br>
+                            <strong>Duração:</strong> 4h/aula (carga horária de 8h/aula no território)<br>
+                            <strong>Formato:</strong> Presencial
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Conteúdos Abordados:</strong>
+                            • Conceitos de liderança territorial<br>
+                            • Papel do empreendedor como agente de transformação social<br>
+                            • Liderança colaborativa e coletiva<br>
+                            • Articulação comunitária para desenvolvimento local<br>
+                            • Casos de sucesso de líderes empreendedores do Jacarezinho
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Evidências de Execução:</strong>
+                            • Lista de presença com 500 participantes<br>
+                            • Registro fotográfico e audiovisual<br>
+                            • Material didático distribuído<br>
+                            • Avaliação de satisfação dos participantes
+                        </div>
+                    </div>
+
+                    <div class="meta-card">
+                        <div class="meta-title">
+                            <span class="meta-icon">●</span>
+                            Seminário 2: "Criando um Ecossistema de Negócios em Áreas Populares"
+                        </div>
+                        <div class="meta-description">
+                            <strong>Público:</strong> Até 500 empreendedores do Jacarezinho<br>
+                            <strong>Duração:</strong> 4h/aula (carga horária de 8h/aula no território)<br>
+                            <strong>Formato:</strong> Presencial
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Conteúdos Abordados:</strong>
+                            • Conceito de ecossistema empreendedor<br>
+                            • Redes de colaboração entre negócios locais<br>
+                            • Fortalecimento da economia circular na favela<br>
+                            • Parcerias estratégicas e desenvolvimento conjunto<br>
+                            • Visão sistêmica do território como mercado
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Evidências de Execução:</strong>
+                            • Lista de presença com 500 participantes<br>
+                            • Registro fotográfico e audiovisual<br>
+                            • Material didático distribuído<br>
+                            • Avaliação de satisfação dos participantes
+                        </div>
+                    </div>
+                </div>
+
+                <div class="territory-section">
+                    <div class="territory-header"> RESULTADO ESPERADO DA ETAPA 3</div>
+                    <div class="meta-card" style="border-color: #ECC203;">
+                        <div class="meta-description">
+                            <strong style="color: #092040;">Impacto Social Esperado:</strong><br><br>
+                            ✓ <strong>1.000 empreendedores</strong> com formação inicial em liderança e empreendedorismo<br>
+                            ✓ <strong>Identificação de lideranças</strong> comunitárias com potencial de transformação territorial<br>
+                            ✓ Fortalecimento da <strong>consciência coletiva</strong> sobre o papel do empreendedor no território<br>
+                            ✓ <strong>Rede de empreendedores</strong> conectados e sensibilizados para colaboração<br>
+                            ✓ <strong>Visão sistêmica</strong> do território como espaço de oportunidades<br>
+                            ✓ <strong>Empoderamento</strong> de mulheres, negros e famílias de PcD como protagonistas<br>
+                            ✓ Base para <strong>seleção do núcleo duro</strong> que receberá capacitação técnica intensiva<br>
+                            ✓ <strong>16h/aula de formação</strong> oferecidas em cada território
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ETAPA 4 -->
+        <div class="stage">
+            <div class="stage-header">
+                <div class="stage-number">4</div>
+                <div class="stage-title">CAPACITAÇÃO TÉCNICA PARA EMPREENDEDORES</div>
+            </div>
+            <div class="stage-content">
+                <span class="duration">⏱ Duração: 4 meses</span>
+                
+                <div class="objective">
+                    <h4> Objetivo Geral</h4>
+                    <p>Realizar oficinas de capacitação técnica em gestão de negócios para empreendedores selecionados a partir do mapeamento, oferecendo formação prática e aplicada em temas essenciais para o desenvolvimento e consolidação dos empreendimentos locais.</p>
+                </div>
+
+                <div class="stats-box">
+                    <div class="stat-item">
+                        <div class="stat-number">16</div>
+                        <div class="stat-label">Oficinas Realizadas</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50</div>
+                        <div class="stat-label">Empreendedores por Território</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100</div>
+                        <div class="stat-label">Total no Núcleo Duro</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">64h</div>
+                        <div class="stat-label">Carga Horária Oferecida</div>
+                    </div>
+                </div>
+
+                <h3 style="font-family: 'Montserrat', sans-serif; color: #092040; margin: 25px 0 15px 0; font-size: 20px;"> Ações e Metas Detalhadas</h3>
+
+                <div class="meta-card">
+                    <div class="meta-title">
+                        <span class="meta-icon">▶</span>
+                        Ação 4.1 - Capacitações Coletivas em Gestão de Negócios
+                    </div>
+                    <div class="meta-description">
+                        Nesta etapa serão realizadas, ao longo de 4 meses, 16 oficinas voltadas à capacitação técnica dos empreendedores, por localidade. Os temas das capacitações serão: gestão voltados à formalização de negócios; modelagem de negócios canvas; capacitação financeira; marketing digital; estratégias de vendas; precificação; entre outros. Cada oficina terá duração de 2h/aula, direcionadas a até 50 empreendedores por localidade, selecionados a partir do mapeamento inicialmente realizado e da identificação de lideranças empreendedoras da etapa anterior.
+                    </div>
+                </div>
+
+                <div class="territory-section">
+                    <div class="territory-header"> OFICINAS - MARÉ (50 empreendedores do núcleo duro)</div>
+                    
+                    <div class="meta-card">
+                        <div class="meta-title">
+                            <span class="meta-icon">●</span>
+                            Módulo 1: Formalização de Negócios
+                        </div>
+                        <div class="meta-description">
+                            <strong>Duração:</strong> 2h/aula por oficina
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Conteúdos:</strong><br>
+                            • MEI, ME e demais modalidades jurídicas<br>
+                            • Vantagens da formalização<br>
+                            • Processo de abertura de empresa<br>
+                            • Obrigações e direitos do empreendedor formal
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Indicadores:</strong><br>
+                            • 50 participantes capacitados<br>
+                            • Número de empreendedores que iniciaram processo de formalização após oficina
+                        </div>
+                    </div>
+
+                    <div class="meta-card">
+                        <div class="meta-title">
+                            <span class="meta-icon">●</span>
+                            Módulo 2: Modelagem de Negócios Canvas
+                        </div>
+                        <div class="meta-description">
+                            <strong>Duração:</strong> 2h/aula por oficina
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Conteúdos:</strong><br>
+                            • Ferramenta Business Model Canvas<br>
+                            • 9 blocos do modelo de negócios<br>
+                            • Proposta de valor<br>
+                            • Segmentos de clientes<br>
+                            • Aplicação prática ao negócio do participante
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Indicadores:</strong><br>
+                            • 50 participantes capacitados<br>
+                            • Canvas dos negócios estruturados
+                        </div>
+                    </div>
+
+                    <div class="meta-card">
+                        <div class="meta-title">
+                            <span class="meta-icon">●</span>
+                            Módulo 3: Gestão Financeira
+                        </div>
+                        <div class="meta-description">
+                            <strong>Duração:</strong> 2h/aula por oficina
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Conteúdos:</strong><br>
+                            • Fluxo de caixa<br>
+                            • Controle de receitas e despesas<br>
+                            • Separação de finanças pessoais e empresariais<br>
+                            • Planejamento financeiro básico
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Indicadores:</strong><br>
+                            • 50 participantes capacitados<br>
+                            • Empreendedores implementando controles financeiros
+                        </div>
+                    </div>
+
+                    <div class="meta-card">
+                        <div class="meta-title">
+                            <span class="meta-icon">●</span>
+                            Módulo 4: Marketing Digital
+                        </div>
+                        <div class="meta-description">
+                            <strong>Duração:</strong> 2h/aula por oficina
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Conteúdos:</strong><br>
+                            • Presença digital (redes sociais, WhatsApp Business)<br>
+                            • Criação de conteúdo relevante<br>
+                            • Relacionamento com clientes online<br>
+                            • Ferramentas gratuitas de marketing
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Indicadores:</strong><br>
+                            • 50 participantes capacitados<br>
+                            • Aumento da presença digital dos negócios
+                        </div>
+                    </div>
+
+                    <div class="meta-card">
+                        <div class="meta-title">
+                            <span class="meta-icon">●</span>
+                            Módulo 5: Estratégias de Vendas
+                        </div>
+                        <div class="meta-description">
+                            <strong>Duração:</strong> 2h/aula por oficina
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Conteúdos:</strong><br>
+                            • Técnicas de vendas<br>
+                            • Atendimento ao cliente<br>
+                            • Negociação<br>
+                            • Fidelização de clientes
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Indicadores:</strong><br>
+                            • 50 participantes capacitados<br>
+                            • Melhoria nas técnicas de vendas relatada pelos empreendedores
+                        </div>
+                    </div>
+
+                    <div class="meta-card">
+                        <div class="meta-title">
+                            <span class="meta-icon">●</span>
+                            Módulo 6: Precificação
+                        </div>
+                        <div class="meta-description">
+                            <strong>Duração:</strong> 2h/aula por oficina
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Conteúdos:</strong><br>
+                            • Cálculo de custos (fixos e variáveis)<br>
+                            • Margem de lucro<br>
+                            • Estratégias de precificação<br>
+                            • Análise da concorrência
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Indicadores:</strong><br>
+                            • 50 participantes capacitados<br>
+                            • Empreendedores com precificação estruturada
+                        </div>
+                    </div>
+
+                    <div class="meta-card">
+                        <div class="meta-title">
+                            <span class="meta-icon">●</span>
+                            Módulos Adicionais (mais 10 oficinas temáticas)
+                        </div>
+                        <div class="meta-description">
+                            <strong>Total:</strong> 16 oficinas de 2h/aula cada = 32h/aula na Maré
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Possíveis temas adicionais:</strong><br>
+                            • Gestão de estoque<br>
+                            • Inovação e criatividade<br>
+                            • Sustentabilidade nos negócios<br>
+                            • Acesso a crédito e financiamento<br>
+                            • Compras coletivas e cooperativismo<br>
+                            • Tecnologias assistivas para gestão<br>
+                            • E outros conforme necessidades identificadas
+                        </div>
+                    </div>
+                </div>
+
+                <div class="territory-section">
+                    <div class="territory-header"> OFICINAS - JACAREZINHO (50 empreendedores do núcleo duro)</div>
+                    
+                    <div class="meta-card">
+                        <div class="meta-description">
+                            <strong>Estrutura idêntica à Maré:</strong><br><br>
+                            ✓ 16 oficinas de capacitação técnica<br>
+                            ✓ 2h/aula cada oficina = 32h/aula no Jacarezinho<br>
+                            ✓ Até 50 empreendedores participantes<br>
+                            ✓ Mesmos módulos temáticos adaptados à realidade do Jacarezinho<br>
+                            ✓ Foco em gestão de negócios, formalização, marketing, vendas e finanças
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Indicadores por Módulo:</strong><br>
+                            • 50 participantes capacitados por oficina<br>
+                            • Mesmos indicadores de impacto da Maré<br>
+                            • Total de 32h/aula oferecidas no território
+                        </div>
+                    </div>
+                </div>
+
+                <div class="meta-card">
+                    <div class="meta-title">
+                        <span class="meta-icon">▶</span>
+                        Ação 4.2 - Integração e Desenvolvimento de Parcerias Comunitárias
+                    </div>
+                    <div class="meta-description">
+                        Realização de 2 (duas) palestras voltadas ao desenvolvimento de parcerias comunitárias dos negócios locais entre si e de articulação conjunta com organizações maiores, em cada localidade.
+                    </div>
+                </div>
+
+                <div class="territory-section">
+                    <div class="territory-header"> PALESTRAS - MARÉ</div>
+                    
+                    <div class="meta-card">
+                        <div class="meta-title">
+                            <span class="meta-icon">●</span>
+                            Palestra 1: A Importância do Associativismo para Negócios Locais
+                        </div>
+                        <div class="meta-description">
+                            <strong>Público:</strong> 50 empreendedores do núcleo duro<br>
+                            <strong>Duração:</strong> 2h/aula<br>
+                            <strong>Formato:</strong> Presencial
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Conteúdos:</strong><br>
+                            • Benefícios da organização coletiva<br>
+                            • Cooperativas e associações<br>
+                            • Compras conjuntas<br>
+                            • Fortalecimento da economia solidária<br>
+                            • Casos práticos de associativismo na Maré
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Indicadores:</strong><br>
+                            • 50 participantes<br>
+                            • Formação de grupos de interesse coletivo<br>
+                            • Iniciativas de cooperação iniciadas
+                        </div>
+                    </div>
+
+                    <div class="meta-card">
+                        <div class="meta-title">
+                            <span class="meta-icon">●</span>
+                            Palestra 2: Como Desenvolver Parcerias Estratégicas
+                        </div>
+                        <div class="meta-description">
+                            <strong>Público:</strong> 50 empreendedores do núcleo duro<br>
+                            <strong>Duração:</strong> 2h/aula<br>
+                            <strong>Formato:</strong> Presencial
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Conteúdos:</strong><br>
+                            • Identificação de parceiros potenciais<br>
+                            • Articulação com organizações maiores<br>
+                            • Negociação ganha-ganha<br>
+                            • Redes de fornecedores locais<br>
+                            • Parcerias com empresas e poder público
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Indicadores:</strong><br>
+                            • 50 participantes<br>
+                            • Parcerias estabelecidas entre empreendedores<br>
+                            • Articulações com organizações externas
+                        </div>
+                    </div>
+                </div>
+
+                <div class="territory-section">
+                    <div class="territory-header"> PALESTRAS - JACAREZINHO</div>
+                    
+                    <div class="meta-card">
+                        <div class="meta-description">
+                            <strong>Estrutura idêntica à Maré:</strong><br><br>
+                            ✓ Palestra 1: A Importância do Associativismo para Negócios Locais<br>
+                            ✓ Palestra 2: Como Desenvolver Parcerias Estratégicas<br>
+                            ✓ 2h/aula cada palestra = 4h/aula no Jacarezinho<br>
+                            ✓ Até 50 empreendedores participantes<br>
+                            ✓ Foco em cooperação e articulação comunitária
+                        </div>
+                    </div>
+                </div>
+
+                <div class="territory-section">
+                    <div class="territory-header"> RESULTADO ESPERADO DA ETAPA 4</div>
+                    <div class="meta-card" style="border-color: #ECC203;">
+                        <div class="meta-description">
+                            <strong style="color: #092040;">Impacto Social Esperado:</strong><br><br>
+                            ✓ <strong>100 empreendedores (núcleo duro)</strong> com capacitação técnica intensiva<br>
+                            ✓ <strong>64h/aula oferecidas</strong> (32h por território)<br>
+                            ✓ <strong>100 pessoas atendidas</strong> com formação prática em gestão<br>
+                            ✓ Empreendedores com <strong>conhecimentos aplicáveis</strong> em formalização, finanças, marketing e vendas<br>
+                            ✓ <strong>Rede de parcerias comunitárias</strong> fortalecida<br>
+                            ✓ <strong>Associativismo e cooperação</strong> estimulados entre negócios locais<br>
+                            ✓ Empreendedores preparados para <strong>estruturar e expandir</strong> seus negócios<br>
+                            ✓ <strong>Autonomia e protagonismo</strong> no desenvolvimento territorial<br>
+                            ✓ Base sólida para as consultorias especializadas da próxima etapa
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ETAPA 5 -->
+        <div class="stage">
+            <div class="stage-header">
+                <div class="stage-number">5</div>
+                <div class="stage-title">FOMENTO AO DESENVOLVIMENTO DE NEGÓCIOS LOCAIS</div>
+            </div>
+            <div class="stage-content">
+                <span class="duration">⏱ Duração: 7 meses (ações diversas)</span>
+                
+                <div class="objective">
+                    <h4> Objetivo Geral</h4>
+                    <p>Realizar ações para desenvolvimento de iniciativas já em operação, lideradas por pessoas negras, mulheres e/ou pessoas com deficiência. O núcleo-duro desta etapa será formado por 50 negócios em cada território, totalizando 100 negócios, que serão acompanhados durante 7 meses e receberão um conjunto de consultorias individuais, palestras e oficinas em temas como gestão financeira, marketing, formalização, vendas, entre outros.</p>
+                </div>
+
+                <div class="stats-box">
+                    <div class="stat-item">
+                        <div class="stat-number">100</div>
+                        <div class="stat-label">Negócios Acompanhados</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100</div>
+                        <div class="stat-label">Diagnósticos Empresariais</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100</div>
+                        <div class="stat-label">Consultorias Especializadas</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Feiras de Negócios</div>
+                    </div>
+                </div>
+
+                <h3 style="font-family: 'Montserrat', sans-serif; color: #092040; margin: 25px 0 15px 0; font-size: 20px;"> Ações e Metas Detalhadas</h3>
+
+                <div class="meta-card">
+                    <div class="meta-title">
+                        <span class="meta-icon">▶</span>
+                        Ação 5.1 - Diagnóstico Empresarial
+                    </div>
+                    <div class="meta-description">
+                        <strong>Duração:</strong> 2 meses<br><br>
+                        Realização de diagnóstico empresarial para entendimento do nível de maturidade dos negócios selecionados para o núcleo-duro e os principais temas de consultoria a serem trabalhados. Serão realizados, ao longo de 2 meses, 100 diagnósticos empresariais de forma presencial, voltados a 50 empreendedores de cada território, com carga horária de 2 horas para cada negócio participante.
+                    </div>
+                </div>
+
+                <div class="territory-section">
+                    <div class="territory-header"> DIAGNÓSTICOS - MARÉ (50 negócios)</div>
+                    
+                    <div class="meta-card">
+                        <div class="meta-title">
+                            <span class="meta-icon">●</span>
+                            Meta: 50 Diagnósticos Empresariais Aplicados
+                        </div>
+                        <div class="meta-description">
+                            Diagnósticos aplicados por equipe de 20 instrutores contratados qualificados para tal atividade. Uma vez aplicados, os diagnósticos serão avaliados por uma empresa especializada contratada que produzirá relatórios sobre os negócios.
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Aspectos Avaliados:</strong><br>
+                            • Estágio de maturidade do negócio<br>
+                            • Estrutura organizacional atual<br>
+                            • Controles financeiros existentes<br>
+                            • Presença digital e estratégias de marketing<br>
+                            • Principais desafios e gargalos<br>
+                            • Potencial de crescimento<br>
+                            • Necessidades de formalização<br>
+                            • Acesso a fornecedores e clientes
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Evidências de Execução:</strong><br>
+                            • 50 diagnósticos empresariais completos<br>
+                            • 50 relatórios individualizados produzidos<br>
+                            • Registro de 2h de atendimento por negócio<br>
+                            • Plano de ação individualizado por empreendimento<br>
+                            • Identificação de temas prioritários para consultorias
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Indicadores de Impacto:</strong><br>
+                            • 50 empreendedores com diagnóstico profissional do negócio<br>
+                            • Clareza sobre estágio atual e potencial de crescimento<br>
+                            • Direcionamento estratégico para próximas ações<br>
+                            • Base para consultorias personalizadas
+                        </div>
+                    </div>
+                </div>
+
+                <div class="territory-section">
+                    <div class="territory-header"> DIAGNÓSTICOS - JACAREZINHO (50 negócios)</div>
+                    
+                    <div class="meta-card">
+                        <div class="meta-description">
+                            <strong>Estrutura idêntica à Maré:</strong><br><br>
+                            ✓ 50 diagnósticos empresariais aplicados<br>
+                            ✓ 2h de atendimento por negócio<br>
+                            ✓ 50 relatórios individualizados<br>
+                            ✓ Mesmos aspectos avaliados<br>
+                            ✓ Planos de ação personalizados
+                        </div>
+                    </div>
+                </div>
+
+                <div class="meta-card" style="margin-top: 30px;">
+                    <div class="meta-title">
+                        <span class="meta-icon">▶</span>
+                        Ação 5.2 - Consultorias Especializadas
+                    </div>
+                    <div class="meta-description">
+                        <strong>Duração:</strong> 3 meses<br><br>
+                        Realização de consultoria especializada para os 50 empreendedores do núcleo duro de cada território, ao longo de 3 meses. Ao final das consultorias, cada empreendedor terá um plano de negócios estruturado. As consultorias acontecerão com carga horária semanal de 1 (uma) hora, ao longo de 3 meses, totalizando 12 encontros, sendo os 10 primeiros encontros realizados em espaço do projeto e os 2 encontros finais realizados no espaço do negócio do empreendedor.
+                    </div>
+                </div>
+
+                <div class="territory-section">
+                    <div class="territory-header"> CONSULTORIAS - MARÉ (50 empreendedores)</div>
+                    
+                    <div class="meta-card">
+                        <div class="meta-title">
+                            <span class="meta-icon">●</span>
+
+                            Meta: 50 Empreendedores com Consultoria Individualizada
+                        </div>
+                        <div class="meta-description">
+                            <strong>Formato:</strong> 12 encontros de 1h cada = 12h de consultoria por empreendedor<br>
+                            <strong>Total:</strong> 600h de consultoria oferecidas na Maré
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Estrutura das Consultorias:</strong><br>
+                            • <strong>Encontros 1-10:</strong> No espaço do projeto (ambiente estruturado)<br>
+                            • <strong>Encontros 11-12:</strong> No espaço do negócio (aplicação prática)<br>
+                            • Foco: estruturação do modelo de negócios completo
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Temas Abordados nas Consultorias:</strong><br>
+                            • Modelo de negócios estruturado<br>
+                            • Plano financeiro completo<br>
+                            • Estratégia de marketing e posicionamento<br>
+                            • Plano de vendas e crescimento<br>
+                            • Processos operacionais<br>
+                            • Tecnologias assistivas aplicadas ao negócio<br>
+                            • Formalização (quando aplicável)<br>
+                            • Sustentabilidade e inclusão social no negócio
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Evidências de Execução:</strong><br>
+                            • 50 empreendedores atendidos<br>
+                            • 600 horas de consultoria realizadas<br>
+                            • 50 planos de negócio estruturados<br>
+                            • Registro de presença e evolução de cada empreendedor<br>
+                            • Relatório de acompanhamento individualizado<br>
+                            • Registro fotográfico dos encontros in loco
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Indicadores de Impacto:</strong><br>
+                            • 50 negócios com plano estruturado<br>
+                            • Aumento do nível de maturidade dos empreendimentos<br>
+                            • Empreendedores com clareza estratégica<br>
+                            • Modelos de negócio validados e testados<br>
+                            • Orientações personalizadas implementadas
+                        </div>
+                    </div>
+                </div>
+
+                <div class="territory-section">
+                    <div class="territory-header"> CONSULTORIAS - JACAREZINHO (50 empreendedores)</div>
+                    
+                    <div class="meta-card">
+                        <div class="meta-description">
+                            <strong>Estrutura idêntica à Maré:</strong><br><br>
+                            ✓ 50 empreendedores atendidos<br>
+                            ✓ 12 encontros de 1h cada = 12h por empreendedor<br>
+                            ✓ 600h de consultoria oferecidas no Jacarezinho<br>
+                            ✓ 10 encontros no espaço do projeto + 2 no negócio<br>
+                            ✓ 50 planos de negócio estruturados<br>
+                            ✓ Mesmos temas e indicadores da Maré
+                        </div>
+                    </div>
+                </div>
+
+                <div class="meta-card" style="margin-top: 30px;">
+                    <div class="meta-title">
+                        <span class="meta-icon">▶</span>
+                        Ação 5.3 - Acesso ao Mercado e Formação de Networking
+                    </div>
+                    <div class="meta-description">
+                        <strong>Duração:</strong> 2 meses<br><br>
+                        Realização de 4 feiras de negócios com a participação, ao todo, de 100 empreendedores atendidos pelo núcleo duro do projeto, garantindo a representação de uma ampla variedade de setores empresariais e temas relevantes. As feiras terão duração de 4 horas, cada uma.
+                    </div>
+                </div>
+
+                <div class="territory-section">
+                    <div class="territory-header"> FEIRAS DE NEGÓCIOS - MARÉ (2 eventos)</div>
+                    
+                    <div class="meta-card">
+                        <div class="meta-title">
+                            <span class="meta-icon">●</span>
+                            Meta: 2 Feiras de Negócios Realizadas
+                        </div>
+                        <div class="meta-description">
+                            <strong>Formato:</strong> 4 horas de duração cada feira<br>
+                            <strong>Público:</strong> 100 empreendedores (núcleo duro de ambos os territórios)<br>
+                            <strong>Local:</strong> Maré
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Características das Feiras:</strong><br>
+                            • Exposição de produtos e serviços dos empreendedores<br>
+                            • Sessões de formação integradas<br>
+                            • Networking entre empreendedores<br>
+                            • Temas: empreendedorismo, inovação, marketing digital, sustentabilidade e inclusão social<br>
+                            • Espaços para acessibilidade e recursos acessíveis (intérpretes de Libras, infraestrutura adaptada)<br>
+                            • Formato inclusivo e interativo
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Evidências de Execução:</strong><br>
+                            • 2 feiras realizadas na Maré<br>
+                            • Lista de participantes (100 empreendedores presentes)<br>
+                            • Registro fotográfico e audiovisual<br>
+                            • Relatório de resultados (vendas, contatos, parcerias)<br>
+                            • Avaliação de satisfação dos participantes<br>
+                            • Número de visitantes/compradores
+                        </div>
+                        <div class="meta-evidence">
+                            <strong> Indicadores de Impacto:</strong><br>
+                            • 100 empreendedores com espaço de exposição<br>
+                            • Vendas realizadas durante as feiras<br>
+                            • Novos contatos e parcerias estabelecidas<br>
+                            • Visibilidade dos negócios locais<br>
+                            • Fortalecimento da rede empreendedora territorial<br>
+                            • Acesso a novos mercados consumidores
+                        </div>
+                    </div>
+                </div>
+
+                <div class="territory-section">
+                    <div class="territory-header"> FEIRAS DE NEGÓCIOS - JACAREZINHO (2 eventos)</div>
+                    
+                    <div class="meta-card">
+                        <div class="meta-description">
+                            <strong>Estrutura idêntica à Maré:</strong><br><br>
+                            ✓ 2 feiras realizadas no Jacarezinho<br>
+                            ✓ 4 horas de duração cada<br>
+                            ✓ 100 empreendedores participantes (ambos territórios)<br>
+                            ✓ Mesmo formato inclusivo e acessível<br>
+                            ✓ Exposição, vendas e networking<br>
+                            ✓ Mesmos indicadores de impacto
+                        </div>
+                    </div>
+                </div>
+
+                <div class="territory-section">
+                    <div class="territory-header"> RESULTADO ESPERADO DA ETAPA 5</div>
+                    <div class="meta-card" style="border-color: #ECC203;">
+                        <div class="meta-description">
+                            <strong style="color: #092040;">Impacto Social Esperado:</strong><br><br>
+                            ✓ <strong>100 negócios com diagnóstico profissional</strong> completo<br>
+                            ✓ <strong>100 empreendedores com plano de negócios estruturado</strong><br>
+                            ✓ <strong>1.200h de consultoria individualizada</strong> oferecidas (600h por território)<br>
+                            ✓ <strong>4 feiras de negócios realizadas</strong> com participação de 100 empreendedores<br>
+                            ✓ Empreendimentos com <strong>modelo de negócios validado</strong><br>
+                            ✓ <strong>Aumento da capacidade de gestão</strong> dos negócios locais<br>
+                            ✓ <strong>Acesso a novos mercados</strong> e oportunidades de vendas<br>
+                            ✓ <strong>Rede de networking fortalecida</strong> entre empreendedores<br>
+                            ✓ <strong>Visibilidade ampliada</strong> dos negócios periféricos<br>
+                            ✓ Geração de <strong>renda e emprego</strong> nos territórios<br>
+                            ✓ <strong>Formalização estimulada</strong> e orientada<br>
+                            ✓ <strong>Sustentabilidade e inclusão</strong> incorporadas aos modelos de negócio<br>
+                            ✓ Empreendedores com <strong>autonomia e protagonismo</strong> consolidados
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- IMPACTO GERAL -->
+        <div class="impact-summary">
+            <h2> SÍNTESE DE IMPACTO SOCIAL - PROSPERA RIO</h2>
+            
+            <div class="impact-item">
+                <strong> ALCANCE DIRETO TOTAL</strong><br>
+                • 1.000 empreendimentos identificados e mapeados<br>
+                • 1.000 pessoas atendidas nos seminários de liderança<br>
+                • 100 empreendedores no núcleo duro (formação intensiva completa)<br>
+                • 2 territórios impactados (Maré e Jacarezinho)
+            </div>
+
+            <div class="impact-item">
+                <strong> FORMAÇÃO E CAPACITAÇÃO</strong><br>
+                • 16h/aula de seminários (1.000 pessoas)<br>
+                • 64h/aula de oficinas técnicas (100 pessoas do núcleo duro)<br>
+                • 4h/aula de palestras sobre parcerias (100 pessoas)<br>
+                • 1.200h de consultorias individualizadas (100 empreendedores)<br>
+                • <strong>TOTAL: 1.284h de formação oferecidas</strong>
+            </div>
+
+            <div class="impact-item">
+                <strong> PRODUTOS E ENTREGAS</strong><br>
+                • 1 guia digital de acessibilidade<br>
+                • 1 material digital de apoio pedagógico inclusivo<br>
+                • 200 cópias físicas de material pedagógico<br>
+                • 100 diagnósticos empresariais completos<br>
+                • 100 planos de negócio estruturados<br>
+                • 100 relatórios individualizados de consultoria<br>
+                • 1 relatório sistematizado com dados territoriais
+            </div>
+
+            <div class="impact-item">
+                <strong> AÇÕES REALIZADAS</strong><br>
+                • 1.000 questionários aplicados (mapeamento)<br>
+                • 4 seminários de liderança (2 por território)<br>
+                • 16 oficinas técnicas na Maré + 16 no Jacarezinho<br>
+                • 2 palestras sobre parcerias na Maré + 2 no Jacarezinho<br>
+                • 100 diagnósticos empresariais presenciais<br>
+                • 1.200 sessões de consultoria individualizada<br>
+                • 4 feiras de negócios (2 por território)<br>
+                • Acompanhamento contínuo por 18 meses
+            </div>
+
+            <div class="impact-item">
+                <strong> TRANSFORMAÇÕES ESPERADAS</strong><br>
+                • <strong>Inclusão Produtiva:</strong> 100 negócios estruturados gerando renda para pessoas negras, mulheres e famílias de PcD<br>
+                • <strong>Formalização:</strong> Aumento do número de empreendedores formalizados<br>
+                • <strong>Capacitação:</strong> Empreendedores com domínio técnico em gestão de negócios<br>
+                • <strong>Autonomia:</strong> Lideranças locais empoderadas e protagonistas<br>
+                • <strong>Networking:</strong> Rede territorial de cooperação fortalecida<br>
+                • <strong>Visibilidade:</strong> Economia periférica reconhecida e valorizada<br>
+                • <strong>Acessibilidade:</strong> Espaços e metodologias inclusivas implementadas<br>
+                • <strong>Sustentabilidade:</strong> Negócios estruturados com potencial de crescimento<br>
+                • <strong>Território:</strong> Maré e Jacarezinho como ecossistemas empreendedores
+            </div>
+
+            <div class="impact-item">
+                <strong> RESULTADOS DE LONGO PRAZO</strong><br>
+                • Geração de emprego e renda nos territórios<br>
+                • Fortalecimento da economia local<br>
+                • Redução de desigualdades sociais e raciais<br>
+                • Inclusão de pessoas com deficiência no mercado produtivo<br>
+                • Referência metodológica para projetos similares<br>
+                • Dados estratégicos para políticas públicas<br>
+                • Transformação territorial sustentável<br>
+                • Protagonismo comunitário consolidado
+            </div>
+
+            <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 2px solid rgba(255,255,255,0.3);">
+                <p style="font-size: 18px; color: #ECC203; font-weight: 600;">
+                    PROSPERA RIO: TRANSFORMANDO TERRITÓRIOS ATRAVÉS DO EMPREENDEDORISMO INCLUSIVO
+                </p>
+                <p style="font-size: 14px; margin-top: 10px; opacity: 0.9;">
+                    Maré e Jacarezinho como protagonistas do desenvolvimento econômico e social
+                </p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
